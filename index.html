@@ -16,27 +16,40 @@
     <!-- === HERO SECTION === -->
     <section class="hero-section">
         <!-- Your Logo -->
-        <img src="./assets/logo.webp" alt="AI @ IM Logo" id="top-logo" class="absolute top-8 z-30">
-
-        <!-- REVISED: Scrolling Text Strip 1 -->
-        <div class="marquee-container marquee-top-container">
-            <div class="marquee-content scroll-left">
-                <span>INNOVATION</span><span>MACHINE LEARNING</span><span>CONTRIBUTE</span><span>NLP</span><span>ROBOTICS</span><span>EXPERIENCE</span>
-                <span>INNOVATION</span><span>MACHINE LEARNING</span><span>CONTRIBUTE</span><span>NLP</span><span>ROBOTICS</span><span>EXPERIENCE</span>
-            </div>
-        </div>
+        <img src="./assets/logo.webp" alt="AI @ IM Logo" id="top-logo">
 
         <!-- Character Art with Parallax Effect -->
-        <div class="z-10 relative">
-            <!-- Character image path updated -->
+        <div class="character-container">
             <img src="./assets/hero-bot.webp" alt="Character Art" class="character-art">
         </div>
 
-        <!-- REVISED: Scrolling Text Strip 2 -->
+        <!-- Scrolling Text Strip 1 -->
+        <div class="marquee-container marquee-top-container">
+            <div class="marquee-content scroll-left">
+                <!-- Text block is now duplicated for a seamless loop -->
+                <div class="marquee-text-block">
+                    <span>INNOVATION</span><span>UOK</span><span>MACHINE LEARNING</span><span>CONTRIBUTE</span><span>IM</span><span>NLP</span><span>ROBOTICS</span><span>INDUSTRIAL MANAGEMENT</span><span>EXPERIENCE</span>
+                </div>
+                <div class="marquee-text-block" aria-hidden="true">
+                    <span>INNOVATION</span><span>UOK</span><span>MACHINE LEARNING</span><span>CONTRIBUTE</span><span>IM</span><span>NLP</span><span>ROBOTICS</span><span>INDUSTRIAL MANAGEMENT</span><span>EXPERIENCE</span>
+                </div><div class="marquee-text-block" aria-hidden="true">
+                    <span>INNOVATION</span><span>UOK</span><span>MACHINE LEARNING</span><span>CONTRIBUTE</span><span>IM</span><span>NLP</span><span>ROBOTICS</span><span>INDUSTRIAL MANAGEMENT</span><span>EXPERIENCE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scrolling Text Strip 2 -->
         <div class="marquee-container marquee-bottom-container">
             <div class="marquee-content scroll-right">
-                <span>LEADERSHIP</span><span>CODE</span><span>RESEARCH</span><span>DESIGN</span><span>COMMUNITY</span><span>GROWTH</span>
-                <span>LEADERSHIP</span><span>CODE</span><span>RESEARCH</span><span>DESIGN</span><span>COMMUNITY</span><span>GROWTH</span>
+                <!-- Text block is now duplicated for a seamless loop -->
+                <div class="marquee-text-block">
+                    <span>LEADERSHIP</span><span>CODE</span><span>RESEARCH</span><span>UOK</span><span>DESIGN</span><span>COMMUNITY</span><span>IM</span><span>GROWTH</span><span>INDUSTRIAL MANAGEMENT</span>
+                </div>
+                <div class="marquee-text-block" aria-hidden="true">
+                    <span>LEADERSHIP</span><span>CODE</span><span>RESEARCH</span><span>UOK</span><span>DESIGN</span><span>COMMUNITY</span><span>IM</span><span>GROWTH</span><span>INDUSTRIAL MANAGEMENT</span>
+                </div><div class="marquee-text-block" aria-hidden="true">
+                    <span>LEADERSHIP</span><span>CODE</span><span>RESEARCH</span><span>UOK</span><span>DESIGN</span><span>COMMUNITY</span><span>IM</span><span>GROWTH</span><span>INDUSTRIAL MANAGEMENT</span>
+                </div>
             </div>
         </div>
         
@@ -44,7 +57,7 @@
         <div class="hero-fade"></div>
 
         <!-- Register Button -->
-        <a href="#chatbot-section" id="register-btn" class="absolute bottom-12 z-30 bg-yellow-400 text-slate-900 font-bold py-4 px-10 text-lg uppercase tracking-wider transition-all duration-300 ease-in-out hover:bg-white hover:text-slate-900 hover:scale-105">
+        <a href="#chatbot-section" id="register-btn" class="bg-yellow-400 text-slate-900 font-bold py-4 px-10 text-lg uppercase tracking-wider transition-all duration-300 ease-in-out hover:bg-white hover:text-slate-900 hover:scale-105">
             Register Now!
         </a>
     </section>
@@ -55,7 +68,7 @@
             <h2 class="font-teko text-yellow-400 text-2xl tracking-widest">A NEW ERA OF COLLABORATION</h2>
             <h3 class="font-teko text-white text-6xl mt-2">ABOUT AI @ IM</h3>
             <p class="mt-6 max-w-2xl mx-auto text-slate-400 leading-relaxed">
-                AI @ IM is an exclusive community for students of the Department of Industrial Management at the University of Kelaniya who are passionate about Artificial Intelligence. We aim to foster innovation, build exciting projects, and grow together. To begin your journey with us, simply scroll down and send a message to our onboarding assistant to start your application.
+                AI @ IM is an exclusive community for students of the Department of INDUSTRIAL MANAGEMENT at the University of Kelaniya who are passionate about Artificial Intelligence. We aim to foster innovation, build exciting projects, and grow together. To begin your journey with us, simply scroll down and send a message to our onboarding assistant to start your application.
             </p>
         </div>
     </section>
@@ -80,7 +93,7 @@
                 <div class="flex items-center gap-4">
                     <input type="text" id="user-input" placeholder="Type your message..." class="flex-1 bg-[#2e2a52] border border-[#4a456a] rounded-full px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" autocomplete="off">
                     <button type="button" id="send-btn" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-yellow-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                     </button>
                 </div>
             </div>
