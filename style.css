@@ -10,8 +10,8 @@ body {
 
 /* --- Scaling Variables --- */
 :root {
-    --logo-height: 120px; /* Adjust the main logo height here */
-    --character-max-height: 85vh; /* Adjust the character's max height here */
+    --logo-height: 80px; /* Adjust the main logo height here */
+    --character-max-height: 75vh; /* Adjust the character's max height here */
 }
 
 .font-teko {
@@ -41,9 +41,9 @@ body {
 
 .character-container {
     position: absolute;
-    top: 55%; /* Adjusted to bring character up */
+    bottom: 8rem; /* Lowered the character */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 10;
 }
 
@@ -64,8 +64,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 25rem;
-    background: linear-gradient(to top, #111018 20%, transparent);
+    height: 30rem; /* Made the fade taller */
+    background: linear-gradient(to top, #111018 30%, transparent); /* Matched color */
     z-index: 20; /* On top of character, behind button */
 }
 
@@ -164,3 +164,37 @@ body {
     border: 1px solid #4a456a;
 }
 .confirmation-button.secondary:hover { background-color: #2e2a52; }
+
+/* --- NEW: Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+    #top-logo {
+        height: 250px; /* Larger logo on mobile */
+    }
+    .character-container {
+        width: 135%;
+        bottom: 8rem; /* Adjust anchor to position it correctly with the new scale */
+        transform: translateX(-50%);
+    }
+    .character-art {
+        transform: scale(2.8); /* Make character significantly larger */
+        transform-origin: bottom center; /* CRITICAL: Scale from the bottom up */
+    }
+    .marquee-text-block {
+        font-size: 1.1rem; /* Smaller text on mobile */
+    }
+    #register-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    .about-section h3 {
+        font-size: 3rem; /* Smaller title on mobile */
+    }
+    #chatbot-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #chatbot-section > div {
+        height: 85vh; /* Adjust chatbot height for mobile */
+        max-height: none;
+    }
+}
