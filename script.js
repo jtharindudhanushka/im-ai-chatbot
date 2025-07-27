@@ -181,7 +181,7 @@ async function handleUserInput(e) {
 // --- AI-Powered Input Handler ---
 async function callIntelligentHandler(text, question, schema) {
     // --- FIX: PASTE YOUR NEW GOOGLE CLOUD API KEY HERE ---
-    const apiKey = "PASTE_YOUR_GOOGLE_CLOUD_API_KEY_HERE"; 
+    const apiKey = "AIzaSyCHdofyrVL05xv_mERQus5ferigs8YLETs"; 
     
     if (apiKey === "PASTE_YOUR_GOOGLE_CLOUD_API_KEY_HERE") {
         displayMessage("Configuration Error: The Google Cloud API key is missing from script.js. Please follow the setup instructions.", 'bot', 'error');
