@@ -10,7 +10,7 @@ body {
 
 /* --- Scaling Variables --- */
 :root {
-    --logo-height: 80px; /* Adjust the main logo height here */
+    --logo-height: 150px; /* Adjust the main logo height here */
     --character-max-height: 75vh; /* Adjust the character's max height here */
 }
 
@@ -33,7 +33,7 @@ body {
 #top-logo {
     height: var(--logo-height);
     position: absolute;
-    top: 2rem;
+    top: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 30;
