@@ -176,7 +176,7 @@ body {
         transform: translateX(-50%);
     }
     .character-art {
-        transform: scale(2.0); /* Reduced scale to a more manageable size */
+        transform: scale(1.3); /* Reduced scale to a more manageable size */
         transform-origin: bottom center; /* CRITICAL: Scale from the bottom up */
     }
     .marquee-text-block {
