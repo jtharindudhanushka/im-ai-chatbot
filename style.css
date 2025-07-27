@@ -10,7 +10,7 @@ body {
 
 /* --- Scaling Variables --- */
 :root {
-    --logo-height: 150px; /* Adjust the main logo height here */
+    --logo-height: 80px; /* Adjust the main logo height here */
     --character-max-height: 75vh; /* Adjust the character's max height here */
 }
 
@@ -33,7 +33,7 @@ body {
 #top-logo {
     height: var(--logo-height);
     position: absolute;
-    top: 0.5rem;
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 30;
@@ -168,15 +168,15 @@ body {
 /* --- NEW: Mobile Responsive Styles --- */
 @media (max-width: 768px) {
     #top-logo {
-        height: 250px; /* Larger logo on mobile */
+        height: 70px; /* Larger logo on mobile */
     }
     .character-container {
-        width: 135%;
-        bottom: 8rem; /* Adjust anchor to position it correctly with the new scale */
+        width: 100%;
+        bottom: 8rem; /* Adjust anchor to position it correctly */
         transform: translateX(-50%);
     }
     .character-art {
-        transform: scale(2.8); /* Make character significantly larger */
+        transform: scale(2.0); /* Reduced scale to a more manageable size */
         transform-origin: bottom center; /* CRITICAL: Scale from the bottom up */
     }
     .marquee-text-block {
