@@ -10,8 +10,8 @@ body {
 
 /* --- Scaling Variables --- */
 :root {
-    --logo-height: 60px; /* Adjust the main logo height here */
-    --character-max-height: 70vh; /* Adjust the character's max height here */
+    --logo-height: 120px; /* Adjust the main logo height here */
+    --character-max-height: 85vh; /* Adjust the character's max height here */
 }
 
 .font-teko {
@@ -23,39 +23,60 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     background: radial-gradient(ellipse at center, rgba(46, 36, 99, 0.3) 0%, rgba(13,12,18,0) 70%);
 }
+
 #top-logo {
     height: var(--logo-height);
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
 }
+
+.character-container {
+    position: absolute;
+    top: 55%; /* Adjusted to bring character up */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
 .character-art {
     transition: transform 0.1s linear;
     max-height: var(--character-max-height);
     width: auto;
 }
+
+#register-btn {
+    position: absolute;
+    bottom: 3rem;
+    z-index: 30;
+}
+
 .hero-fade {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 25rem; /* Increased height for a taller fade */
+    height: 25rem;
     background: linear-gradient(to top, #111018 20%, transparent);
-    z-index: 25;
+    z-index: 20; /* On top of character, behind button */
 }
 
 /* --- REVISED: Scrolling Text Strips --- */
 .marquee-container {
     position: absolute;
     top: 50%;
-    left: -10%;
-    width: 120%;
+    left: 0;
+    width: 100%;
     padding: 0.5rem 0;
-    overflow: hidden; /* This is crucial */
+    overflow: hidden;
 }
 .marquee-top-container {
     z-index: 5; /* Behind character */
@@ -68,29 +89,32 @@ body {
     transform: translateY(-50%) rotate(4deg); /* Symmetrical rotation */
 }
 .marquee-content {
-    width: 200%;
     display: flex;
+    width: fit-content;
+}
+.marquee-text-block {
+    display: flex;
+    flex-shrink: 0;
     white-space: nowrap;
-    will-change: transform;
     font-size: 1.5rem;
     font-weight: 500;
     color: #1e293b;
 }
-.marquee-content span {
+.marquee-text-block span {
     margin: 0 2rem;
 }
 .scroll-left {
-    animation: scroll-left-anim 40s linear infinite;
+    animation: scroll-left-anim 60s linear infinite;
 }
 .scroll-right {
-    animation: scroll-right-anim 40s linear infinite;
+    animation: scroll-right-anim 60s linear infinite;
 }
 @keyframes scroll-left-anim {
     from { transform: translateX(0%); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-100%); }
 }
 @keyframes scroll-right-anim {
-    from { transform: translateX(-50%); }
+    from { transform: translateX(-100%); }
     to { transform: translateX(0%); }
 }
 
