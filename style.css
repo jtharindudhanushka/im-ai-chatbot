@@ -1,0 +1,142 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d0c12;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* --- Scaling Variables --- */
+:root {
+    --logo-height: 60px; /* Adjust the main logo height here */
+    --character-max-height: 70vh; /* Adjust the character's max height here */
+}
+
+.font-teko {
+    font-family: 'Teko', sans-serif;
+}
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, rgba(46, 36, 99, 0.3) 0%, rgba(13,12,18,0) 70%);
+}
+#top-logo {
+    height: var(--logo-height);
+}
+.character-art {
+    transition: transform 0.1s linear;
+    max-height: var(--character-max-height);
+    width: auto;
+}
+.hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25rem; /* Increased height for a taller fade */
+    background: linear-gradient(to top, #111018 20%, transparent);
+    z-index: 25;
+}
+
+/* --- REVISED: Scrolling Text Strips --- */
+.marquee-container {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    padding: 0.5rem 0;
+    overflow: hidden; /* This is crucial */
+}
+.marquee-top-container {
+    z-index: 5; /* Behind character */
+    background-color: #facc15; /* Yellow */
+    transform: translateY(-50%) rotate(-4deg);
+}
+.marquee-bottom-container {
+    z-index: 6; /* Behind character, but above the other strip */
+    background-color: #e0e0e0; /* Light Gray */
+    transform: translateY(-50%) rotate(4deg); /* Symmetrical rotation */
+}
+.marquee-content {
+    width: 200%;
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+.marquee-content span {
+    margin: 0 2rem;
+}
+.scroll-left {
+    animation: scroll-left-anim 40s linear infinite;
+}
+.scroll-right {
+    animation: scroll-right-anim 40s linear infinite;
+}
+@keyframes scroll-left-anim {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+}
+@keyframes scroll-right-anim {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0%); }
+}
+
+/* --- Chatbot Styles --- */
+#chat-window::-webkit-scrollbar { width: 8px; }
+#chat-window::-webkit-scrollbar-track { background: #1e1b34; }
+#chat-window::-webkit-scrollbar-thumb { background-color: #4a456a; border-radius: 20px; }
+
+.chat-bubble {
+    max-width: 80%;
+    padding: 1rem 1.25rem;
+    border-radius: 1.5rem;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+.bot-bubble {
+    background-color: #2e2a52;
+    color: #e0e0e0;
+    border-bottom-left-radius: 0.25rem;
+}
+.user-bubble {
+    background-color: #facc15;
+    color: #1e293b;
+    font-weight: 500;
+    border-bottom-right-radius: 0.25rem;
+}
+.loading-bubble { display: flex; align-items: center; gap: 8px; }
+.loading-dot { width: 10px; height: 10px; background-color: #94a3b8; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both; }
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.loading-dot:nth-child(2) { animation-delay: -0.16s; }
+@keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+
+.confirmation-button {
+    cursor: pointer;
+    background-color: #facc15;
+    color: #1e293b;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.2s;
+    border: 1px solid #facc15;
+}
+.confirmation-button:hover { background-color: #eab308; }
+.confirmation-button.secondary {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #4a456a;
+}
+.confirmation-button.secondary:hover { background-color: #2e2a52; }
